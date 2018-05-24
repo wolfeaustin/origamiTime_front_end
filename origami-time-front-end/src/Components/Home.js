@@ -7,7 +7,8 @@ class Home extends React.Component {
     super();
 
     this.state = {
-      models: []
+      models: [],
+      currentModels: []
     };
   }
 
@@ -20,13 +21,17 @@ class Home extends React.Component {
   handleModelClick = id => {
     let selectedModel = this.state.models.find(m => m.id === id);
     console.log(selectedModel);
+    this.props.history.push(`/models/${id}`);
     //render modelShow
   };
+
+  handleSearchChange(text) {
+    console.log(text);
+  }
 
   render() {
     return (
       <div>
-        Home Page
         <FiltersContainer />
         <ModelsContainer
           models={this.state.models}

@@ -1,7 +1,14 @@
 import React from "react";
+import { Card } from "semantic-ui-react";
 
 const Filter = props => {
-  return <div>Filter Obj</div>;
+  return (
+    <Card>
+      <Card.Content>
+        <Card.Header>{props.type}</Card.Header>
+      </Card.Content>
+    </Card>
+  );
 };
 
 export default Filter;
