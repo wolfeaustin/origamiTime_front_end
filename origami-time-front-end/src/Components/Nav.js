@@ -18,6 +18,9 @@ class Nav extends React.Component {
   render() {
     return (
       <Menu size="small">
+        <Menu.Item>
+          <img src="https://openclipart.org/download/93811/vliegende-vogel.svg" />
+        </Menu.Item>
         <Menu.Item
           onClick={this.handleMenuSelection}
           active={this.state.activeItem === "Home"}
