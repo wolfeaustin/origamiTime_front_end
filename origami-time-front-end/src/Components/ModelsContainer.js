@@ -3,11 +3,8 @@ import ModelCard from "./ModelCard";
 import { Card } from "semantic-ui-react";
 
 const ModelsContainer = props => {
-  console.log("ModelsContainer", props);
-  console.log(props.models.length);
-
   return (
-    <Card.Group columns={5}>
+    <Card.Group itemsPerRow={5}>
       {props.models.map(m => (
         <ModelCard
           handleModelClick={props.handleModelClick}

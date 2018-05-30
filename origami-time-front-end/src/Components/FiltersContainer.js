@@ -5,16 +5,16 @@ import { Grid } from "semantic-ui-react";
 const FiltersContainer = props => {
   return (
     <div>
-      <Grid columns={4}>
+      <Grid columns={6}>
         <Grid.Row>
           <Grid.Column>
-            <Filter type="All Models" />
+            <Filter onClick={props.onClick} type="All Models" />
           </Grid.Column>
           <Grid.Column>
-            <Filter type="User Models" />
+            <Filter onClick={props.onClick} type="User Models" />
           </Grid.Column>
           <Grid.Column>
-            <Filter type="Traditional" />
+            <Filter onClick={props.onClick} type="Traditional" />
           </Grid.Column>
         </Grid.Row>
       </Grid>

@@ -4,15 +4,15 @@ import { Card, Image, Icon } from "semantic-ui-react";
 //User(user_id) needs to go somewhere
 
 const ModelCard = props => {
-  console.log("ModelCard", props);
   return (
     <Card
       centered="true"
       color="blue"
       size="tiny"
       onClick={e => props.handleModelClick(props.id)}
+      style={{ width: "200px", margin: "35px" }}
     >
-      <Image size="small" src={props.photo} />
+      <Image size="small" src={props.photo} centered />
       <Card.Content>
         <Card.Header>{props.name}</Card.Header>
         <Card.Meta>{props.category}</Card.Meta>

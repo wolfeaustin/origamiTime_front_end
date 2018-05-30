@@ -3,7 +3,10 @@ import { Card } from "semantic-ui-react";
 
 const Filter = props => {
   return (
-    <Card>
+    <Card
+      onClick={e => props.onClick(props.type)}
+      style={{ width: "200px", margin: "35px" }}
+    >
       <Card.Content>
         <Card.Header>{props.type}</Card.Header>
       </Card.Content>

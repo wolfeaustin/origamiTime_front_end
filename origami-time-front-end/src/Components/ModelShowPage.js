@@ -35,7 +35,7 @@ class ModelShowPage extends React.Component {
         <p>{this.state.difficulty}</p>
         <p>{this.state.description}</p>
         {this.state.steps.map(s => (
-          <div>
+          <div key={s.id}>
             <img src={s.photo} />
             <p>{s.description}</p>
           </div>

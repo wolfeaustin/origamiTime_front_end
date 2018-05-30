@@ -15,26 +15,45 @@ class Home extends React.Component {
   componentDidMount() {
     fetch("http://localhost:3000/api/v1/models")
       .then(r => r.json())
-      .then(data => this.setState({ models: data }));
+      .then(data => this.setState({ models: data, currentModels: data }));
   }
 
   handleModelClick = id => {
-    let selectedModel = this.state.models.find(m => m.id === id);
-    console.log(selectedModel);
     this.props.history.push(`/models/${id}`);
-    //render modelShow
+  };
+
+  handleFilterClick = type => {
+    let filteredModels = [];
+    switch (type) {
+      case "Traditional":
+        filteredModels = this.state.models.filter(m => m.user_id === 1);
+        break;
+      case "User Models":
+        filteredModels = this.state.models.filter(m => m.user_id !== 1);
+        break;
+      case "All Models":
+        filteredModels = this.state.models;
+        break;
+      default:
+        filteredModels = this.state.models;
+        break;
+    }
+    this.setState({
+      currentModels: filteredModels
+    });
   };
 
   handleSearchChange(text) {
-    console.log(text);
+    // console.log(text);
   }
 
   render() {
+    console.log(this.state.currentModels);
     return (
       <div>
-        <FiltersContainer />
+        <FiltersContainer onClick={this.handleFilterClick} />
         <ModelsContainer
-          models={this.state.models}
+          models={this.state.currentModels}
           handleModelClick={this.handleModelClick}
         />
       </div>

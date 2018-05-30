@@ -44,6 +44,9 @@ class Nav extends React.Component {
         <Menu.Item position="right">
           <Input className="icon" icon="search" placeholder="Search..." />
         </Menu.Item>
+        <Menu.Item position="right">
+          <Link to="/addmodel">Add Model</Link>
+        </Menu.Item>
       </Menu>
     );
   }
