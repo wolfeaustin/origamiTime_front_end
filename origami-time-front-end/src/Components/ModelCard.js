@@ -10,7 +10,7 @@ const ModelCard = props => {
       color="blue"
       size="tiny"
       onClick={e => props.handleModelClick(props.id)}
-      style={{ width: "200px", margin: "35px" }}
+      style={{ width: "250px", margin: "45px" }}
     >
       <Image size="small" src={props.photo} centered />
       <Card.Content>

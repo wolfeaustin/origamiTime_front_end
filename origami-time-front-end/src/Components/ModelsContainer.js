@@ -4,7 +4,7 @@ import { Card } from "semantic-ui-react";
 
 const ModelsContainer = props => {
   return (
-    <Card.Group itemsPerRow={5}>
+    <Card.Group itemsPerRow={5} style={{ margin: "45px" }}>
       {props.models.map(m => (
         <ModelCard
           handleModelClick={props.handleModelClick}

@@ -25,6 +25,7 @@ class ModelDescription extends React.Component {
   };
 
   handleImageUpload = e => {
+    debugger;
     this.setState({
       imagePath: e.target.value
     });
