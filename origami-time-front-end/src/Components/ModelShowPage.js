@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Image,
-  Grid,
-  Label,
-  Button,
-  Card,
-  Icon,
-  Item
-} from "semantic-ui-react";
+import { Image, Button, Card, Item } from "semantic-ui-react";
 
 class ModelShowPage extends React.Component {
   constructor() {

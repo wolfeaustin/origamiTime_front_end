@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Input } from "semantic-ui-react";
+import { Menu } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 class Nav extends React.Component {
   constructor() {

@@ -34,7 +34,6 @@ class ModelDescription extends React.Component {
   render() {
     return (
       <div>
-        <Image src={this.state.imagePath} />
         <Label as="label" basic htmlFor="upload">
           <Button
             icon="upload"

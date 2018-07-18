@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Input, TextArea, Button, Grid } from "semantic-ui-react";
+import { Form, TextArea, Button, Grid } from "semantic-ui-react";
 
 class Step extends React.Component {
   constructor() {

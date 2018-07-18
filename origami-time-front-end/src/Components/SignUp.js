@@ -4,7 +4,6 @@ import {
   Flag,
   Grid,
   Header,
-  Select,
   Image,
   Form,
   Segment,
